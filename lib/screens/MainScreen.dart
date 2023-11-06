@@ -18,10 +18,15 @@ class MainScreen extends StatelessWidget {
             color: Colors.grey,
           ),
 
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.yellow,
+          GestureDetector(
+            onTap: () {
+              Get.toNamed('/third');
+            },
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.yellow,
+            ),
           )
           ,
           Row(
