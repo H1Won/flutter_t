@@ -12,10 +12,14 @@ class MainScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.grey,
+          GestureDetector(
+            onTap: () => 
+            Get.toNamed('/todo'),
+            child: Container(
+              width: 100,
+              height: 100,
+              color: Colors.grey,
+            ),
           ),
 
           GestureDetector(

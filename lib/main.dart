@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:test_1/screens/DiaryScreen.dart';
 //import 'package:intl/date_symbol_data_http_request.dart';
 import 'package:test_1/screens/mainscreen.dart';
 import 'package:test_1/screens/secondScreen.dart';
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
       home: MainScreen(),
       getPages: [
         GetPage(name: '/second', page: () =>SecondScreen()),
-        GetPage(name: '/third', page: ()=>ThirdScreen())
+        GetPage(name: '/third', page: ()=>ThirdScreen()),
+        GetPage(name: '/todo', page: ()=>DiaryScreen())
       ],
     );
   }
