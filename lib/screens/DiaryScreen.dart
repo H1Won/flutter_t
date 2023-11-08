@@ -19,8 +19,7 @@ class DiaryScreenState extends State<DiaryScreen>{
 
 
   List toDoList =[
-    ["Make Tutorial", false],
-    ["Do Something", false],
+   
   ];
 
   //DateTime focusedDay= DateTime.now();
@@ -48,7 +47,7 @@ class DiaryScreenState extends State<DiaryScreen>{
         return DialogBox(
           controller: _controller,
           onSave: saveNewTask,
-          onCancel: () => Navigator.of(context).pop()
+          onCancel: () => Navigator.of(context).pop(),
         );
        }
       );
@@ -75,7 +74,7 @@ class DiaryScreenState extends State<DiaryScreen>{
                 taskName: toDoList[index][0],
                taskCompleted: toDoList[index][1],
                 onChanged:(value) => checkBoxChanged(value,index),
-                deleteFunction: (context) => deleteTask,);
+                deleteFunction: (context) => deleteTask(index),);
             }, 
           ) 
     );
